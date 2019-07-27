@@ -26,7 +26,8 @@ public class Main {
                         macAddressStr.append(String.format("%02X", macAddressBytes[i])+":");
                         // check if there are more bytes, then add a "-" to make it more readable
                     }
-                    System.out.println(macAddressStr.toString());
+                    String newMac = (String) macAddressStr.subSequence(0, macAddressStr.length() -1);
+                    System.out.println(newMac);
                 }
             }
         } catch (SocketException e) {
